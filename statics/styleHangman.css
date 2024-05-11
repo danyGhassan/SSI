@@ -1,0 +1,130 @@
+body {
+    font-family:'Creepster';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://w.forfun.com/fetch/b7/b780c88e996e0cf72bd3a7847fd06258.jpeg?w=1200&r=0.5625'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+form {
+    margin-top: 20px;
+    text-shadow: 3px 3px 5px #333;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+    text-shadow: 3px 3px 5px #333;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+    text-shadow: 3px 3px 5px #333;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    text-shadow: 3px 3px 5px #333;
+    font-family: 'Creepster';
+}
+
+button:hover {
+    background-color: black;
+    color : white;
+    text-shadow: 3px 3px 5px #333;
+}
+
+button.reset {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    text-shadow: 3px 3px 5px #333;
+}
+
+button.reset:hover {
+    background-color: black;
+    color : white;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.contenu{
+    text-align: center;
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    z-index: 1; /* Empilement au-dessus des gouttes de pluie */
+
+}
+
+.mot {
+    font-size: 24px;
+    margin: 10px 0;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.lettres-saisis {
+    margin: 10px 0;
+    font-size: 16px;
+    color: black;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.essais-restants {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.pendu {
+    margin-top: 20px;
+    font-family: 'Arial';
+    white-space: pre;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.rain {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: url(rain.png);
+    animation: rain .3s linear infinite;
+    z-index: -1;
+}
+
+.rain::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: lighting .9s linear infinite;
+    opacity: 0;
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 20% 100%;
+    }
+}
+
+

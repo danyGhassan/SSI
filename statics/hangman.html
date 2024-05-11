@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jeu du Pendu</title>
+		<link rel="stylesheet" type="text/css" href="/statics/styleHangman.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="contenu">
+			<div class="mot">{{.Mot}}</div>
+			<div class="lettres-saisis">Lettres saisis : {{.Lettres}}</div>
+			<div class="essais-restants">Essais Restants : {{.Essais}}</div>
+			<div class="pendu">{{.Pendu}}</div>
+			<form method="post">
+				<label for="lettre">Entrez une lettre :</label>
+				<input type="text" class="lettre" name="lettre" maxlength="1" autocomplete="off" autofocus>
+				<button type="submit">Entrez</button>
+			</form>
+			<button class="reset" onclick="resetGame()">Nouvelle Partie</button>
+		</div>
+		<script>
+			function resetGame() {
+				window.location.href = "/reset";
+			}
+		</script>
+		<div class="rain"></div>
+	</body>
+</html>
