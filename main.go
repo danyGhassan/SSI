@@ -352,29 +352,10 @@ func Hash(password string) string {
 }
 
 func containsForbiddenChars(input string) bool {
-	for _, char := range []string{"'", `\`, "#", ";", ")", ","} {
+	for _, char := range []string{"'", `\`, "#", ";", ")", ",", "\"", "\b", "\n", "\r", "\t", "\\", "%", "_", "-", "*", "$"} {
 		if strings.Contains(input, char) {
 			return true
 		}
 	}
 	return false
 }
-
-// func extraire() ([]string, error) {
-// 	content, erreur := io.ReadFile("sel.txt")
-// 	if erreur != nil {
-// 		//si il y'a une erreur
-// 		return nil, erreur
-// 	}
-// 	mots := strings.Fields(string(content))
-// 	return mots, nil
-// }
-
-// func choisirMotSel() string {
-// 	rand.Seed(time.Now().UnixNano())
-// 	mot, erreur := "extraire()"
-// 	if erreur != nil {
-// 		log.Fatal(erreur)
-// 	}
-// 	return mot[rand.Intn(len(mot))]
-// }
